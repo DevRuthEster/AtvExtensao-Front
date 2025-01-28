@@ -1,0 +1,129 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    display: flex;
+    height: 100vh;
+}
+
+.navbar-superior {
+    width: 100%;
+    background-color: #186216;
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 10;
+}
+
+.navbar-superior .logo h1 {
+    font-size: 24px;
+}
+
+.navbar-superior .usuario {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin-right: 32px;
+}
+
+.navbar-superior .avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+
+.menu-lateral {
+    width: 200px;
+    background-color: #fff;
+    border-right: 1px solid #ccc;
+    display: flex;
+    flex-direction: column;
+    padding-top: 80px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    z-index: 9;
+}
+
+.menu-lateral ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+.material-symbols-outlined,
+.a-li {
+    color: #555;
+}
+
+.menu-lateral li {
+    padding: 15px;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+
+}
+
+
+.menu-lateral li:hover {
+    background-color: #f5f5f5;
+}
+
+main{
+    margin-top: 50px;
+    margin-left: 200px;
+    padding: 20px;
+    width: 100%;
+    
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    font-size: 18px;
+    text-align: left;
+}
+
+table thead tr {
+    background-color: #009879;
+    color: #ffffff;
+    text-align: left;
+    font-weight: bold;
+}
+
+table th, table td {
+    padding: 12px 15px;
+    border: 1px solid #dddddd;
+}
+
+table tbody tr {
+    border-bottom: 1px solid #dddddd;
+}
+
+table tbody tr:nth-of-type(even) {
+    background-color: #f3f3f3;
+}
+
+table tbody tr:last-of-type {
+    border-bottom: 2px solid #009879;
+}

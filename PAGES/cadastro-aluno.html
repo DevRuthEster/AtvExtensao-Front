@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>GPE - CADASTRO ALUNO</title>
-    <link rel="stylesheet" href="cadastro-aluno.css">
+    <link rel="stylesheet" href="../CSS/cadastro-aluno.css">
     <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet">
 </head>
 
@@ -25,13 +25,16 @@
     <aside class="menu-lateral">
         <nav>
             <ul>
-                <li><a href="http://127.0.0.1:5500/cadastro-professor.html" class="material-symbols-outlined"target="_blank">person</a>
+                <li><a href="http://127.0.0.1:5500/PAGES/cadastro-professor.html" class="material-symbols-outlined"
+                        target="_blank">person</a>
                     <a href="http://127.0.0.1:5500/cadastro-professor.html" class="a-li" target="_blank">Professor</a>
                 </li>
-                <li><a href="http://127.0.0.1:5500/matricula.html" class="material-symbols-outlined" target="_blank">person</a> <a
-                        href="http://127.0.0.1:5500/matricula.html" class="a-li" target="_blank">Matrícula</a></li>
-                <li><a href="http://127.0.0.1:5500/Consulta.html" class="material-symbols-outlined" target="_blank">search</a> <a
-                        href="http://127.0.0.1:5500/Consulta.html" class="a-li" target="_blank">Consulta</a></li>
+                <li><a href="http://127.0.0.1:5500/matricula.html" class="material-symbols-outlined"
+                        target="_blank">person</a> <a href="http://127.0.0.1:5500/matricula.html" class="a-li"
+                        target="_blank">Matrícula</a></li>
+                <li><a href="http://127.0.0.1:5500/Consulta.html" class="material-symbols-outlined"
+                        target="_blank">search</a> <a href="http://127.0.0.1:5500/Consulta.html" class="a-li"
+                        target="_blank">Consulta</a></li>
             </ul>
         </nav>
     </aside>
@@ -51,31 +54,31 @@
 
 
             <div class="formulario">
-                <form>
+                <form id="addForm">
                     <div class="linha">
                         <div class="campo">
                             <label for="nome">NOME</label>
-                            <input type="text" id="nome" placeholder="digite o nome completo">
+                            <input type="text" id="alunoNome" placeholder="digite o nome completo" required>
                         </div>
                         <div class="campo">
                             <label for="cpf">CPF</label>
-                            <input type="text" id="cpf" placeholder="000.000.000-00">
+                            <input type="text" id="alunoCpf" placeholder="000.000.000-00" required>
                         </div>
                     </div>
                     <div class="linha">
                         <div class="campo">
                             <label for="rg">RG</label>
-                            <input type="text" id="rg" placeholder="00000000000">
+                            <input type="text" id="alunoRg" placeholder="00000000000" required>
                         </div>
                         <div class="campo">
                             <label for="data-nascimento">DATA DE NASCIMENTO</label>
-                            <input type="text" id="data-nascimento" placeholder="DD/MM/AAAA">
+                            <input type="text" id="alunoDataNasc" placeholder="DD/MM/AAAA" required>
                         </div>
                     </div>
                     <div class="linha">
                         <div class="campo">
                             <label for="genero">Gênero<label>
-                                    <select name="genero" id="genero" required>
+                                    <select name="genero" id="alunoGenero" required>
                                         <option selected disable value="">Selecione</option>
                                         <option value="masculino">Masculino</option>
                                         <option value="feminino">Feminino</option>
@@ -84,45 +87,46 @@
                         </div>
                         <div class="campo">
                             <label for="endereco">ENDEREÇO</label>
-                            <input type="text" id="endereco" placeholder="nome da rua, número, bairro">
+                            <input type="text" id="alunoEndereco" placeholder="nome da rua, número, bairro" required>
                         </div>
                     </div>
 
                     <div class="linha">
                         <div class="campo">
                             <label for="nome-responsavel">NOME RESPONSÁVEL</label>
-                            <input type="text" id="nome-responsavel" placeholder="digite o nome do resnponsável">
+                            <input type="text" id="alunoNomeResponsavel" placeholder="digite o nome do resnponsável"required>
                         </div>
                         <div class="campo">
-                            <label for="contato-responsavel">CONTATO RESPONSAVEL</label>
-                            <input type="number" id="contato-responsavel" placeholder="(00)00000-0000">
+                            <label for="contato-responsavel" >CONTATO RESPONSAVEL</label>
+                            <input type="number" id="alunoContatoResponsavel" placeholder="(00)00000-0000" required >
                         </div>
                     </div>
+
                     <div class="linha">
                         <div class="campo">
+                            <label for="modalidade">MODALIDADE</label>
+                            <select name="modalidade" id="alunoModalidade" required>
+                                <option selected disable value="">Selecione</option>
+                                <option value="futsal">Futsal</option>
+                                <option value="basquete">Basquete</option>
+                                <option value="volei">Volei</option>
+                            </select>
+                        </div>
+                        <div class="campo">
                             <label for="telefone">TELEFONE</label>
-                            <input type="text" id="telefone" placeholder="(00)00000-0000">
-                        </div>
-                        <div class="linha">
-                            <div class="campo">
-                                <label for="modalidade">MODALIDADE</label>
-                                <select name="modalidade" id="modalidade" required>
-                                    <option selected disable value="">Selecione</option>
-                                    <option value="futsal">Futsal</option>
-                                    <option value="basquete">Basquete</option>
-                                    <option value="volei">Volei</option>
-                                </select>
-                            </div>
-
+                            <input type="text" id="alunoTelefone" placeholder="(00)00000-0000">
                         </div>
 
-                        <div class="botao-container">
-                            <button type="submit" class="botao">CADASTRAR</button>
-                        </div>
+                    </div>
+
+                    <div class="botao-container">
+                        <button type="submit" class="botao">CADASTRAR</button>
+                    </div>
                 </form>
             </div>
         </div>
     </main>
+    <script src="../JS/aluno.js"></script>
 </body>
 
 </html>

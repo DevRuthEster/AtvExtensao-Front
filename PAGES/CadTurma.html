@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../CSS/CadTurma.css">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet">
+    <title>GPE - CADASTRO TURMA</title>
+</head>
+
+<body>
+    <header class="navbar-superior">
+        <div class="logo">
+            <h1>GPE</h1>
+        </div>
+        <div class="usuario">
+            <span>NOME</span>
+            <img src="IMG/IMG.jpg" alt="Avatar do usuário" class="avatar">
+        </div>
+    </header>
+
+    <aside class="menu-lateral">
+        <nav>
+            <ul>
+                <li><a href="http://127.0.0.1:5500/cadastro-professor.html" class="material-symbols-outlined"
+                        target="_blank">person</a>
+                    <a href="http://127.0.0.1:5500/cadastro-professor.html" class="a-li" target="_blank">Professor</a>
+                </li>
+                <li><a href="http://127.0.0.1:5500/matricula.html" class="material-symbols-outlined"
+                        target="_blank">person</a> <a href="http://127.0.0.1:5500/matricula.html" class="a-li"
+                        target="_blank">Matrícula</a></li>
+                <li><a href="http://127.0.0.1:5500/Consulta.html" class="material-symbols-outlined"
+                        target="_blank">search</a> <a href="http://127.0.0.1:5500/Consulta.html" class="a-li"
+                        target="_blank">Consulta</a></li>
+            </ul>
+        </nav>
+    </aside>
+    <main class="conteudo">
+        <div class="abas">
+            <span class="aba ativa">TURMA</span>
+        </div>
+
+        <div class="formulario-container">
+
+
+            <div class="formulario">
+                <form>
+                    <div class="linha">
+                        <div class="campo">
+                            <label for="codigo">CÓDIGO</label>
+                            <input type="text" id="codigo" placeholder="0000000" required>
+                        </div>
+                        <div class="campo">
+                            <label for="qntd-vagas">QUANTIDADE DE VAGAS</label>
+                            <input type="text" id="qntd-vagas" placeholder="00" required>
+                        </div>
+                    </div>
+                    <div class="linha">
+                        <div class="campo">
+                            <label for="professor">PROFESSOR</label>
+                            <select name="professor" id="professor" required>
+                                <option selected disable value="">Selecione</option>
+                                <option value="prof1">prof1</option>
+                                <option value="prof2">prof2</option>
+                                <option value="prof3">prof3</option>
+                            </select>
+                        </div>
+                        <div class="campo">
+                            <label for="data-abertura">DATA DE ABERTURA</label>
+                            <input type="date" id="data-abertura" placeholder="dd/mm/aaaa">
+                        </div>
+                    </div>
+                    <div class="linha">
+                        <div class="campo">
+                            <label for="nivel">NÍVEL</label>
+                            <select name="nivel" id="nivel" required>
+                                <option selected disable value="">Selecione</option>
+                                <option value="sub07">SUB07</option>
+                                <option value="sub09">SUB09</option>
+                                <option value="sub11">SUB11</option>
+                                <option value="SUB13">SUB13</option>
+                                <option value="sub15">SUB15</option>
+                                <option value="sub17">SUB17</option>
+                            </select>
+                        </div>
+                        <div class="campo">
+                            <label for="data-inicio">DATA DE INÍCIO</label>
+                            <input type="date" id="data-inicio" placeholder="dd/mm/aaaa"required>
+                        </div>
+                    </div>
+                    <div class="linha">
+                        <div class="campo">
+                            <label for="data-conclusao">DATA DE CONCLUSÃO</label>
+                            <input type="date" id="data-conclusao" placeholder="dd/mm/aaaa" required>
+                        </div>
+                        <div class="campo">
+
+                        </div>
+                    </div>
+                    <div class="linha">
+                        <div class="campo-dias">
+                            <label for="dias-da-semana">DIAS DA SEMANA</label><br>
+                            <label for="segunda">SEGUNDA-FEIRA</label>
+                            <input type="checkbox" id="segunda" name="segunda">
+                            <label for="terca">TERÇA-FEIRA</label>
+                            <input type="checkbox" id="terca" name="terca">
+                            <label for="quarta">QUARTA-FEIRA</label>
+                            <input type="checkbox" id="quarta" name="quarta">
+                            <label for="quinta">QUINTA-FEIRA</label>
+                            <input type="checkbox" id="quinta" name="quinta">
+                            <label for="sexta">SEXTA-FEIRA</label>
+                            <input type="checkbox" id="sexta" name="sexta">
+                        </div>
+                    </div>
+                    <div class="botao-container">
+                        <button type="submit" class="botao">CADASTRAR</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </main>
+
+</body>
+
+</html>
