@@ -45,21 +45,21 @@
 
 
             <div class="formulario">
-                <form>
+                <form id="addForm">
                     <div class="linha">
                         <div class="campo">
                             <label for="codigo">CÓDIGO</label>
-                            <input type="text" id="codigo" placeholder="0000000" required>
+                            <input type="text" id="turmaCodigo" placeholder="0000000" required>
                         </div>
                         <div class="campo">
                             <label for="qntd-vagas">QUANTIDADE DE VAGAS</label>
-                            <input type="text" id="qntd-vagas" placeholder="00" required>
+                            <input type="text" id="turmaQntdVagas" placeholder="00" required>
                         </div>
                     </div>
                     <div class="linha">
                         <div class="campo">
                             <label for="professor">PROFESSOR</label>
-                            <select name="professor" id="professor" required>
+                            <select name="professor" id="turmaProfessor" required>
                                 <option selected disable value="">Selecione</option>
                                 <option value="prof1">prof1</option>
                                 <option value="prof2">prof2</option>
@@ -68,13 +68,13 @@
                         </div>
                         <div class="campo">
                             <label for="data-abertura">DATA DE ABERTURA</label>
-                            <input type="date" id="data-abertura" placeholder="dd/mm/aaaa">
+                            <input type="date" id="turmaDataAbertura" placeholder="dd/mm/aaaa">
                         </div>
                     </div>
                     <div class="linha">
                         <div class="campo">
                             <label for="nivel">NÍVEL</label>
-                            <select name="nivel" id="nivel" required>
+                            <select name="nivel" id="turmaNivel" required>
                                 <option selected disable value="">Selecione</option>
                                 <option value="sub07">SUB07</option>
                                 <option value="sub09">SUB09</option>
@@ -86,13 +86,13 @@
                         </div>
                         <div class="campo">
                             <label for="data-inicio">DATA DE INÍCIO</label>
-                            <input type="date" id="data-inicio" placeholder="dd/mm/aaaa"required>
+                            <input type="date" id="turmaDataInicio" placeholder="dd/mm/aaaa"required>
                         </div>
                     </div>
                     <div class="linha">
                         <div class="campo">
                             <label for="data-conclusao">DATA DE CONCLUSÃO</label>
-                            <input type="date" id="data-conclusao" placeholder="dd/mm/aaaa" required>
+                            <input type="date" id="turmaDataConclusao" placeholder="dd/mm/aaaa" required>
                         </div>
                         <div class="campo">
 
@@ -102,15 +102,15 @@
                         <div class="campo-dias">
                             <label for="dias-da-semana">DIAS DA SEMANA</label><br>
                             <label for="segunda">SEGUNDA-FEIRA</label>
-                            <input type="checkbox" id="segunda" name="segunda">
+                            <input type="checkbox" id="turmaSegunda" name="segunda">
                             <label for="terca">TERÇA-FEIRA</label>
-                            <input type="checkbox" id="terca" name="terca">
+                            <input type="checkbox" id="turmaTerca" name="terca">
                             <label for="quarta">QUARTA-FEIRA</label>
-                            <input type="checkbox" id="quarta" name="quarta">
+                            <input type="checkbox" id="turmaQuarta" name="quarta">
                             <label for="quinta">QUINTA-FEIRA</label>
-                            <input type="checkbox" id="quinta" name="quinta">
+                            <input type="checkbox" id="turmaQuinta" name="quinta">
                             <label for="sexta">SEXTA-FEIRA</label>
-                            <input type="checkbox" id="sexta" name="sexta">
+                            <input type="checkbox" id="turmaSexta" name="sexta">
                         </div>
                     </div>
                     <div class="botao-container">
@@ -120,7 +120,7 @@
             </div>
         </div>
     </main>
-
+<script src="../JS/turma.js"></script>
 </body>
 
 </html>
