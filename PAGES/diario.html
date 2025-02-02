@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../CSS/diario.css">
+    <title>GPE - DIÁRIO</title>
+</head>
+
+<body>
+    <header class="navbar-superior">
+        <div class="logo">
+            <h1>GPE</h1>
+        </div>
+        <div class="usuario">
+            <span>NOME</span>
+            <img src="IMG/IMG.jpg" alt="Avatar do usuário" class="avatar">
+        </div>
+    </header>
+
+    <div class="diario-container">
+        <h2>Diário de Frequência de Aula</h2>
+        <form id="diarioForm">
+            <label for="turma">TURMA</label>
+            <select id="turmaSelect">
+                <option value=" ">Selecionar uma turma</option>
+            </select>
+            <label for="data">Data:</label>
+            <input type="date" id="dataAula" name="data" required>
+
+            <table id="diarioTabela">
+                <thead>
+                    <tr>
+                        <th>Aluno</th>
+                        <th>Presente</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- aqui será inseridos os alunos e as presenças-->
+                </tbody>
+            </table>
+
+            <button type="submit">Salvar Frequência</button>
+        </form>
+    </div>
+    <script src="../JS/diario.js"></script>
+</body>
+
+</html>

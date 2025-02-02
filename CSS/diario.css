@@ -1,0 +1,102 @@
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    display: flex;
+    height: 100vh;
+}
+
+
+.navbar-superior {
+    width: 100%;
+    background-color: #186216;
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 10;
+}
+
+.navbar-superior .logo h1 {
+    font-size: 24px;
+}
+
+.navbar-superior .usuario {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin-right: 32px;
+}
+
+.navbar-superior .avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+.diario-container {
+    margin: 100px auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 600px;
+}
+.diario-container h2 {
+    margin-bottom: 20px;
+    font-size: 24px;
+    color: #333;
+    text-align: center;
+}
+.diario-container label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #555;
+}
+.diario-container input[type="date"], select{
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+}
+.diario-container table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+.diario-container table th,
+.diario-container table td {
+    padding: 10px;
+    border: 1px solid #ccc;
+    text-align: left;
+}
+.diario-container table th {
+    background-color: #f8f9fa;
+}
+.diario-container table td {
+    background-color: #fff;
+}
+.diario-container table td input[type="checkbox"] {
+    margin: 0;
+    cursor: pointer;
+}
+.diario-container button {
+    width: 100%;
+    padding: 10px;
+    background-color: #28a745;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+}
+.diario-container button:hover {
+    background-color: #218838;
+}
