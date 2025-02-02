@@ -25,14 +25,17 @@
     <aside class="menu-lateral">
         <nav>
             <ul>
-                <li><a href="http://127.0.0.1:5500/cadastro-professor.html" class="material-symbols-outlined"target="_blank">person</a>
-                    <a href="http://127.0.0.1:5500/cadastro-professor.html" class="a-li"target="_blank">Professor</a>
+                <li><a href="http://127.0.0.1:5500/cadastro-professor.html" class="material-symbols-outlined"
+                        target="_blank">person</a>
+                    <a href="http://127.0.0.1:5500/cadastro-professor.html" class="a-li" target="_blank">Professor</a>
                 </li>
-                <li><a href="http://127.0.0.1:5500/cadastro-aluno.html" class="material-symbols-outlined"target="_blank">person</a>
-                    <a href="http://127.0.0.1:5500/cadastro-aluno.html" class="a-li"target="_blank">Aluno</a>
+                <li><a href="http://127.0.0.1:5500/cadastro-aluno.html" class="material-symbols-outlined"
+                        target="_blank">person</a>
+                    <a href="http://127.0.0.1:5500/cadastro-aluno.html" class="a-li" target="_blank">Aluno</a>
                 </li>
-                <li><a href="http://127.0.0.1:5500/Consulta.html" class="material-symbols-outlined"target="_blank">search</a> <a
-                        href="http://127.0.0.1:5500/Consulta.html" class="a-li"target="_blank">Consulta</a></li>
+                <li><a href="http://127.0.0.1:5500/Consulta.html" class="material-symbols-outlined"
+                        target="_blank">search</a> <a href="http://127.0.0.1:5500/Consulta.html" class="a-li"
+                        target="_blank">Consulta</a></li>
             </ul>
         </nav>
     </aside>
@@ -51,25 +54,30 @@
 
             <!-- Formulário -->
             <div class="formulario">
-                <form>
+                <form id="addForm">
                     <div class="linha">
                         <div class="campo">
-                            <label for="nome">NOME</label>
-                            <input type="text" id="nome" placeholder="JOÃO SILVA">
+                            <label for="cpf">CPF</label>
+                            <select id="alunoSelect" onchange="preencherNome()">
+                                <option value=" ">Selecionar um aluno</option>
+                            </select>
                         </div>
                         <div class="campo">
-                            <label for="cpf">CPF</label>
-                            <input type="text" id="cpf" placeholder="000.000.000-00">
+                            <label for="nome">NOME</label>
+                            <input type="text" id="matriculaNome" placeholder="JOÃO SILVA" disabled>
                         </div>
                     </div>
                     <div class="linha">
                         <div class="campo">
                             <label for="turma">TURMA</label>
-                            <input type="number" id="turma" placeholder="00000000">
+                            <select id="turmaSelect">
+                                <option value=" ">Selecionar uma turma</option>
+                            </select>
+
                         </div>
                         <div class="campo">
                             <label for="data-matricula">DATA DE MATRÍCULA</label>
-                            <input type="text" id="data-matricula" placeholder="DD/MM/AAAA">
+                            <input type="date" id="matriculaData">
                         </div>
                     </div>
 
@@ -80,6 +88,73 @@
             </div>
         </div>
     </main>
+    <script>
+        // preencher o select com o cpf dos alunos
+        function preencherSelectCpf() {
+            let select = document.getElementById('alunoSelect');
+            let alunos = JSON.parse(localStorage.getItem('alunos'));
+            alunos.forEach(aluno => {
+                let option = document.createElement("option");
+                option.value = aluno.cpf;
+                option.innerText = aluno.cpf;
+                select.appendChild(option);
+            });
+        }
+
+        // preencher o campo nome do aluno
+        function preencherNome() {
+            let select = document.getElementById('alunoSelect');
+            let alunos = JSON.parse(localStorage.getItem('alunos'));
+            let cpf = select.value;
+            let aluno = alunos.find(aluno => aluno.cpf == cpf);
+
+            let nome = document.getElementById('matriculaNome');
+            nome.value = aluno ? aluno.nome : '';
+
+        }
+        window.onload = preencherSelectCpf();
+
+        // preencher o select com as turmas
+        function preencherSelectTurma() {
+            let select = document.getElementById('turmaSelect');
+            let turmas = JSON.parse(localStorage.getItem('turmas'));
+            turmas.forEach(turma => {
+                let option = document.createElement("option");
+                option.value = turma.codigo;
+                option.innerText = turma.codigo;
+                select.appendChild(option);
+            });
+        }
+        window.onload = preencherSelectTurma();
+
+        // matricular o aluno
+        document.getElementById('addForm').addEventListener('submit', (e) => {
+            e.preventDefault();
+            addMatricula();
+        });
+        function addMatricula() {
+            const cpf = document.getElementById('alunoSelect').value;
+            const nome = document.getElementById('matriculaNome').value;
+            const turma = document.getElementById('turmaSelect').value;
+            const dataMatricula = document.getElementById('matriculaData').value;
+
+
+            // verificar se todos os campos foram preenchidos e salvo no localStorage
+            if (cpf && nome && turma && dataMatricula) {
+                const matriculas = JSON.parse(localStorage.getItem('matriculas')) || [];
+                const newId = matriculas.length ? Math.max(...matriculas.map(matricula => matricula.id)) + 1 : 1;
+                const newMatricula = { id: newId, cpf, nome, turma, dataMatricula };
+                matriculas.push(newMatricula);
+                localStorage.setItem('matriculas', JSON.stringify(matriculas));
+                document.getElementById('addForm').reset();
+                alert('Matrícula feita com sucesso!');
+            }
+
+
+        }
+    </script>
+
+
 </body>
 
 </html>
