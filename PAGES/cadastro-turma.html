@@ -16,23 +16,31 @@
         </div>
         <div class="usuario">
             <span>NOME</span>
-            <img src="IMG/IMG.jpg" alt="Avatar do usuário" class="avatar">
+            <img src="../IMG/IMG.jpg" alt="Avatar do usuário" class="avatar">
         </div>
     </header>
 
     <aside class="menu-lateral">
         <nav>
             <ul>
-                <li><a href="http://127.0.0.1:5500/cadastro-professor.html" class="material-symbols-outlined"
+                <li><a href="http://127.0.0.1:5500/PAGES/home.html" class="material-symbols-outlined"
+                        target="_blank">home</a>
+                    <a href="http://127.0.0.1:5500/PAGES/home.html" class="a-li" target="_blank">Home</a>
+                </li>
+                <li><a href="http://127.0.0.1:5500/PAGES/cadastro-aluno.html" class="material-symbols-outlined"
+                    target="_blank">person</a> <a href="http://127.0.0.1:5500/PAGES/cadastro-aluno.html"
+                    class="a-li" target="_blank">Aluno</a></li>
+                <li><a href="http://127.0.0.1:5500/PAGES/cadastro-professor.html" class="material-symbols-outlined"
                         target="_blank">person</a>
                     <a href="http://127.0.0.1:5500/cadastro-professor.html" class="a-li" target="_blank">Professor</a>
                 </li>
-                <li><a href="http://127.0.0.1:5500/matricula.html" class="material-symbols-outlined"
-                        target="_blank">person</a> <a href="http://127.0.0.1:5500/matricula.html" class="a-li"
+                <li><a href="http://127.0.0.1:5500/PAGES/matricula.html" class="material-symbols-outlined"
+                        target="_blank">person</a> <a href="http://127.0.0.1:5500/PAGES/matricula.html" class="a-li"
                         target="_blank">Matrícula</a></li>
-                <li><a href="http://127.0.0.1:5500/Consulta.html" class="material-symbols-outlined"
-                        target="_blank">search</a> <a href="http://127.0.0.1:5500/Consulta.html" class="a-li"
-                        target="_blank">Consulta</a></li>
+
+                <li><a href="http://127.0.0.1:5500/PAGES/cadastro-modalidade.html" class="material-symbols-outlined"
+                        target="_blank">person</a> <a href="http://127.0.0.1:5500/PAGES/cadastro-modalidade.html" class="a-li"
+                        target="_blank">Modalidade</a></li>
             </ul>
         </nav>
     </aside>
@@ -59,11 +67,8 @@
                     <div class="linha">
                         <div class="campo">
                             <label for="professor">PROFESSOR</label>
-                            <select name="professor" id="turmaProfessor" required>
-                                <option selected disable value="">Selecione</option>
-                                <option value="prof1">prof1</option>
-                                <option value="prof2">prof2</option>
-                                <option value="prof3">prof3</option>
+                            <select id="professorSelect">
+                                <option value=" ">Selecionar um professor</option>
                             </select>
                         </div>
                         <div class="campo">

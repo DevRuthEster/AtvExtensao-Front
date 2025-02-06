@@ -26,3 +26,15 @@ function addTurma() {
     }
 
 }
+function preencherSelectProfessor() {
+    let select = document.getElementById('professorSelect');
+    let professores = JSON.parse(localStorage.getItem('professores'));
+    professores.forEach(professor => {
+        let option = document.createElement("option");
+        option.value = professor.nome;
+        option.innerText = professor.nome;
+        select.appendChild(option);
+    });
+    
+}
+window.onload = preencherSelectProfessor();

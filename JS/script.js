@@ -32,10 +32,10 @@ loginForm.addEventListener('submit', (e) => {
     if (user) {
         alert(`Login efetuado com sucesso! Bem-vindo ${user.name}`);
         if (user.role === 'admin') {
-            window.location.href = './PAGES/cadastro-aluno.html';
+            window.location.href = './PAGES/home.html';
 
         } else if (user.role === 'professor') {
-            window.location.href = './PAGES/professor.html';
+            window.location.href = './PAGES/diario.html';
         }
     }
     else {
